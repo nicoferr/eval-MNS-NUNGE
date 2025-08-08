@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: flask_react_app
+    ports:
+      - "5200:5200"
+    volumes:
+      - ./cocktails.db:/app/cocktails.db
+    environment:
+      - FLASK_ENV=production
